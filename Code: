@@ -1,0 +1,40 @@
+using System;
+using System.Threading;
+
+namespace Homework
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            var e = (1,100);
+            var a = Convert.ToInt32(Console.ReadLine());
+            var b = Convert.ToInt32(Console.ReadLine());
+            var c = Convert.ToInt32(Console.ReadLine());
+            var d = (Math.Max(a, Math.Max(b, c)));
+            switch (d % 2)
+            {
+                case 0:
+                    Console.WriteLine("Четное");
+                    break;
+                default:
+                    Console.WriteLine("Не Четное");
+                    break;
+
+            }
+            if (d < 100)
+            {
+                Console.WriteLine("Меньше 100");
+            }
+            else if (Convert.ToBoolean(d == 100))
+            {
+                Console.WriteLine("Ровно 100");
+            }
+            else if (d > 100)
+            {
+                Console.WriteLine("Больше 100");
+            }
+
+        }
+    }
+}
